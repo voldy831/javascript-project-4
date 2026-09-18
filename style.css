@@ -1,0 +1,133 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    padding-top: 5vh;            
+    min-height: 100vh;
+}
+.score-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#current-round {
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+#best-score {
+    color: #ffea00;
+    font-weight: bold;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    gap: 20px;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.card-red,.card-blue,.card-green,.card-yellow {
+    width: 180px;
+    height: 180px;
+    border-radius: 25px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+    border: 4px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-red    { background-color: #ff1744; } 
+.card-blue   { background-color: #2979ff; } 
+.card-green  { background-color: #00e676; } 
+.card-yellow { background-color: #ffea00; } 
+
+.card-red:hover,.card-blue:hover,.card-green:hover,.card-yellow:hover {
+    opacity: 0.8;
+    transform: translateY(-5px);
+}
+
+.active {
+    opacity: 1 !important;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px currentColor !important;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+#start-btn {
+    padding: 12px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #2979ff, #00e5ff);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(41, 121, 255, 0.3);
+    transition: 0.3s;
+}
+
+#start-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(41, 121, 255, 0.5);
+}
+
+#start-btn:disabled {
+    background: #444;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.status-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    width: 320px;
+    height:30px;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #00e5ff;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.error {
+    color: #ff1744;
+    border-color: rgba(255, 23, 68, 0.5);
+    box-shadow: 
+        inset 0 0 20px rgba(255, 23, 68, 0.2),
+        0 0 15px rgba(255, 23, 68, 0.4);
+}
+
+.right {
+    color: #00e676; 
+    border-color: rgba(0, 230, 118, 0.5);
+    box-shadow: 
+        inset 0 0 20px rgba(0, 230, 118, 0.2),
+        0 0 15px rgba(0, 230, 118, 0.4);
+    transform: scale(1.05); 
+}
+
+.right,.error{
+    transition: all 0.2s ease-out;
+}
