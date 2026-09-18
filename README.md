@@ -1,6 +1,6 @@
-# 🔍 Interactive Posts Feed
+# 🔍 Simon Says Memory Game
 
-> 🚀 **Live Demo:** [Watch the demo in the browser]()
+> 🚀 **Live Demo:** [Watch the demo in the browser](https://voldy831.github.io/javascript-project-4/)
 
 # 🧠 Simon Says Memory Game
 
